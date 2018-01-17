@@ -3,7 +3,7 @@
 @section('content')
 
 	@include('paperkit2.layouts.top-nav')
-	
+
     <div class="wrapper">
         <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('{{ asset('img/banner1-2.jpg') }}');">
 			<div class="filter"></div>
@@ -99,7 +99,9 @@
                     <div class="tab-pane" id="academics" role="tabpanel">
                         <div class="row">
                             <div class="col-12">
-                            	#academics pending populate
+                            	@include('paperkit2.partials.index.timeline', [
+                            		'contents' => $academicContents
+                            	])
                             </div>
                         </div>
                     </div>

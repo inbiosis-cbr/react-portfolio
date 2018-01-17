@@ -27,6 +27,8 @@
 	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 	<link href="{{ asset('themes/paperkit2/assets/css/nucleo-icons.css') }}" rel="stylesheet">
 
+    @stack('custom-css')
+
 </head>
 <body>
     @yield('content')
