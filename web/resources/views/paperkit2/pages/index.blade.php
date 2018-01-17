@@ -105,9 +105,47 @@
                     <div class="tab-pane active" id="personalDetails" role="tabpanel">
                         <div class="row">
                             <div class="col-md-6 col-12">
-                            	#info
+                            	
+                            	@include('paperkit2.partials.index.card', [
+                            		'content' => [
+                            			'iconClass' => 'd-none',
+                            			'title' => 'Name',
+                            			'subtitle' => '',
+                            			'fulltext' => 'Loke Kok Keong',
+                            		]
+                            	])
+
+                            	@include('paperkit2.partials.index.card', [
+                            		'content' => [
+                            			'iconClass' => 'd-none',
+                            			'title' => 'Age',
+                            			'subtitle' => '',
+                            			'fulltext' => '32 years',
+                            		]
+                            	])
+
+                            	@include('paperkit2.partials.index.card', [
+                            		'content' => [
+                            			'iconClass' => 'd-none',
+                            			'title' => 'Email',
+                            			'subtitle' => '',
+                            			'fulltext' => 'kkloke86@k2inno.com',
+                            		]
+                            	])
+
+
                             </div>
                             <div class="col-md-6 col-12">
+
+                            	@include('paperkit2.partials.index.card', [
+                            		'content' => [
+                            			'iconClass' => 'fa fa-birthday-cake',
+                            			'title' => 'Date of Birth',
+                            			'subtitle' => '',
+                            			'fulltext' => '10 October 1986',
+                            		]
+                            	])
+
                             </div>
                         </div>
                     </div>
