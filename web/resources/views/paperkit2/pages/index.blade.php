@@ -10,38 +10,46 @@
 					<span class="navbar-toggler-bar"></span>
 					<span class="navbar-toggler-bar"></span>
 	            </button>
-	            <a class="navbar-brand" href="https://www.creative-tim.com">Paper Kit 2</a>
+	            <a class="navbar-brand" href="https://k2inno.com">K2inno</a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbarToggler">
 	            <ul class="navbar-nav ml-auto">
+
 	                <li class="nav-item">
 	                    <a href="{{ asset('themes/paperkit2/index.html') }}" class="nav-link"><i class="nc-icon nc-layout-11"></i>Components</a>
 	                </li>
 	                <li class="nav-item">
 	                    <a href="{{ asset('themes/paperkit2/documentation/tutorial-components.html') }}" target="_blank" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>  Documentation</a>
 	                </li>
+
 					<li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
+                        <a class="nav-link" rel="tooltip" title="Follow me on Twitter" data-placement="bottom" href="{{ config('socialmedia.twitter') }}" target="_blank">
                             <i class="fa fa-twitter"></i>
                             <p class="d-lg-none">Twitter</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+                        <a class="nav-link" rel="tooltip" title="Follow me on Facebook" data-placement="bottom" href="{{ config('socialmedia.facebook') }}" target="_blank">
                             <i class="fa fa-facebook-square"></i>
                             <p class="d-lg-none">Facebook</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
+                        <a class="nav-link" rel="tooltip" title="Follow me on Instagram" data-placement="bottom" href="{{ config('socialmedia.instagram') }}" target="_blank">
                             <i class="fa fa-instagram"></i>
                             <p class="d-lg-none">Instagram</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://www.github.com/CreativeTimOfficial" target="_blank">
+                        <a class="nav-link" rel="tooltip" title="Public GitHub" data-placement="bottom" href="{{ config('socialmedia.github') }}" target="_blank">
                             <i class="fa fa-github"></i>
                             <p class="d-lg-none">GitHub</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="LinkedIn Profile" data-placement="bottom" href="{{ config('socialmedia.linkedin') }}" target="_blank">
+                            <i class="fa fa-linkedin"></i>
+                            <p class="d-lg-none">LinkedIn</p>
                         </a>
                     </li>
 	            </ul>
@@ -50,25 +58,24 @@
     </nav>
 
     <div class="wrapper">
-        <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('{{ asset('themes/paperkit2/assets/img/fabio-mangione.jpg') }}';">
+        <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('{{ asset('img/banner1-2.jpg') }}');">
 			<div class="filter"></div>
 		</div>
         <div class="section profile-content">
             <div class="container">
                 <div class="owner">
                     <div class="avatar">
-                        <img src="{{ asset('themes/paperkit2/assets/img/faces/joe-gardner-2.jpg') }}" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                        <img src="{{ asset('img/profile-square.png') }}" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                     </div>
                     <div class="name">
-                        <h4 class="title">Jane Faker<br /></h4>
-						<h6 class="description">Music Producer</h6>
+                        <h4 class="title">Loke Kok Keong<br /></h4>
+						<h6 class="description">Fullstack Web Developer cum Computational Biologist</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 ml-auto mr-auto text-center">
-                        <p>An artist of considerable range, Jane Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
+                        <p>A guy who likes to develop web platforms, cook and swim. Grateful to assist others into simplify their daily business and working tasks via web and computing adoptation.</p>
                         <br />
-                        <btn class="btn btn-outline-default btn-round"><i class="fa fa-cog"></i> Settings</btn>
                     </div>
                 </div>
                 <br/>
@@ -76,10 +83,16 @@
                     <div class="nav-tabs-wrapper">
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Follows</a>
+                                <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Personal Details</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#following" role="tab">Following</a>
+                                <a class="nav-link" data-toggle="tab" href="#following" role="tab">Education</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#following" role="tab">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#following" role="tab">Feeds</a>
                             </li>
                         </ul>
                     </div>
@@ -143,7 +156,7 @@
         <div class="container">
             <div class="row">
                 <nav class="footer-nav">
-                    <ul>
+                    <ul class="d-none">
                         <li><a href="https://www.creative-tim.com">Creative Tim</a></li>
                         <li><a href="http://blog.creative-tim.com">Blog</a></li>
                         <li><a href="https://www.creative-tim.com/license">Licenses</a></li>
@@ -151,7 +164,7 @@
                 </nav>
                 <div class="credits ml-auto">
                     <span class="copyright">
-                        © <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                        © <script>document.write(new Date().getFullYear())</script>, customize with <i class="fa fa-heart heart"></i> from Creative Tim
                     </span>
                 </div>
             </div>

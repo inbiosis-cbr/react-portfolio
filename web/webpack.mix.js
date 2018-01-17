@@ -15,3 +15,5 @@ mix.react('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
 
 mix.copyDirectory('resources/assets/themes/paperkit2', 'public/themes/paperkit2');
+mix.copyDirectory('resources/assets/img', 'public/img');
+mix.copy('resources/assets/favicon.ico', 'public/favicon.ico');

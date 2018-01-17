@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<link rel="icon" type="image/png" href="{{ asset('themes/paperkit2/assets/img/favicon.ico') }}">
-	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('themes/paperkit2/assets/img/apple-icon.png') }}">
+	<link rel="icon" type="image/png" href="{{ asset('favicon.ico') }}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('favicon.ico') }}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>
@@ -12,6 +12,8 @@
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<!-- Bootstrap core CSS     -->
 	<link href="{{ asset('themes/paperkit2/assets/css/bootstrap.min.css') }}" rel="stylesheet" />
