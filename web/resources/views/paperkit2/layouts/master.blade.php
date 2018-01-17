@@ -41,4 +41,6 @@
 <!--  Paper Kit Initialization snd functons -->
 <script src="{{ asset('themes/paperkit2/assets/js/paper-kit.js?v=2.1.0') }}"></script>
 
+<script src="{{ asset('js/app.js') }}"></script>
+
 </html>
