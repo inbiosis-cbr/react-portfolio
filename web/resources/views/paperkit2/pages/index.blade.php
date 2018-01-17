@@ -81,72 +81,63 @@
                 <br/>
                 <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
-                        <ul class="nav nav-tabs" role="tablist">
+                        <ul class="nav nav-tabs" role="tablist" id="infoTab-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Personal Details</a>
+                                <a class="nav-link infoTab-link active" data-toggle="tab" href="#personalDetails" role="tab">Personal Details</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#following" role="tab">Education</a>
+                                <a class="nav-link infoTab-link" data-toggle="tab" href="#academics" role="tab">Academics</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#following" role="tab">Portfolio</a>
+                                <a class="nav-link infoTab-link" data-toggle="tab" href="#portfolio" role="tab">Portfolio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#following" role="tab">Feeds</a>
+                                <a class="nav-link infoTab-link" data-toggle="tab" href="#publications" role="tab">Publications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link infoTab-link" data-toggle="tab" href="#feeds" role="tab">Feeds</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- Tab panes -->
                 <div class="tab-content following">
-                    <div class="tab-pane active" id="follows" role="tabpanel">
+                    <div class="tab-pane active" id="personalDetails" role="tabpanel">
                         <div class="row">
-                            <div class="col-md-6 ml-auto mr-auto">
-                                <ul class="list-unstyled follows">
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-md-2 col-sm-2 ml-auto mr-auto">
-                                                <img src="{{ asset('themes/paperkit2/assets/img/faces/clem-onojeghuo-2.jpg') }}" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                            </div>
-                                            <div class="col-md-7 col-sm-4  ml-auto mr-auto">
-                                                <h6>Flume<br/><small>Musical Producer</small></h6>
-                                            </div>
-                                            <div class="col-md-3 col-sm-2  ml-auto mr-auto">
-												<div class="form-check">
-					                                <label class="form-check-label">
-					                                    <input class="form-check-input" type="checkbox" value="" checked>
-					                                    <span class="form-check-sign"></span>
-					                                </label>
-					                            </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <hr />
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-md-2 ml-auto mr-auto ">
-                                                <img src="{{ asset('themes/paperkit2/assets/img/faces/ayo-ogunseinde-2.jpg') }}" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                            </div>
-                                            <div class="col-md-7 col-sm-4">
-                                                <h6>Banks<br /><small>Singer</small></h6>
-                                            </div>
-                                            <div class="col-md-3 col-sm-2">
-												<div class="form-check">
-					                                <label class="form-check-label">
-					                                    <input class="form-check-input" type="checkbox" value="">
-					                                    <span class="form-check-sign"></span>
-					                                </label>
-					                            </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                            <div class="col-md-6 col-12">
+                            	#info
+                            </div>
+                            <div class="col-md-6 col-12">
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane text-center" id="following" role="tabpanel">
-                        <h3 class="text-muted">Not following anyone yet :(</h3>
-                        <button class="btn btn-warning btn-round">Find artists</button>
+                    <div class="tab-pane" id="academics" role="tabpanel">
+                        <div class="row">
+                            <div class="col-12">
+                            	#academics
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="portfolio" role="tabpanel">
+                        <div class="row">
+                            <div class="col-12">
+                            	#portfolio
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="publications" role="tabpanel">
+                        <div class="row">
+                            <div class="col-12">
+                            	#publications
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="feeds" role="tabpanel">
+                        <div class="row">
+                            <div class="col-12">
+                            	#feeds
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,3 +163,26 @@
     </footer>
 
 @endsection
+
+@push('custom-js')
+<script>
+    $(".infoTab-link").each(function(){
+        $(this).click(function(){
+            setTimeout(function(){
+                updateNav();    
+            }, 200);
+        });
+    });
+
+    function updateNav(){
+        $(".infoTab-link").each(function(){
+            let href = $(this).attr('href');
+            if($(href).get(0) && $(href).hasClass('active')){
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    }
+</script>
+@endpush

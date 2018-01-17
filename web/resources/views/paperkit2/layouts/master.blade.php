@@ -45,4 +45,6 @@
 
 <script src="{{ asset('js/app.js') }}"></script>
 
+@stack('custom-js')
+
 </html>
