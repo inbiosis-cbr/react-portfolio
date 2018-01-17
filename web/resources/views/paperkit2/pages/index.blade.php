@@ -15,12 +15,16 @@
 			<div class="collapse navbar-collapse" id="navbarToggler">
 	            <ul class="navbar-nav ml-auto">
 
+	            	@php
+	            	/*
 	                <li class="nav-item">
 	                    <a href="{{ asset('themes/paperkit2/index.html') }}" class="nav-link"><i class="nc-icon nc-layout-11"></i>Components</a>
 	                </li>
 	                <li class="nav-item">
 	                    <a href="{{ asset('themes/paperkit2/documentation/tutorial-components.html') }}" target="_blank" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>  Documentation</a>
 	                </li>
+	                */
+	                @endphp
 
 					<li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="Follow me on Twitter" data-placement="bottom" href="{{ config('socialmedia.twitter') }}" target="_blank">
@@ -118,18 +122,18 @@
                             	@include('paperkit2.partials.index.card', [
                             		'content' => [
                             			'iconClass' => 'd-none',
-                            			'title' => 'Age',
+                            			'title' => 'Email',
                             			'subtitle' => '',
-                            			'fulltext' => '32 years',
+                            			'fulltext' => 'kkloke86@k2inno.com',
                             		]
                             	])
 
                             	@include('paperkit2.partials.index.card', [
                             		'content' => [
                             			'iconClass' => 'd-none',
-                            			'title' => 'Email',
+                            			'title' => 'Age',
                             			'subtitle' => '',
-                            			'fulltext' => 'kkloke86@k2inno.com',
+                            			'fulltext' => '32 years',
                             		]
                             	])
 
@@ -152,28 +156,28 @@
                     <div class="tab-pane" id="academics" role="tabpanel">
                         <div class="row">
                             <div class="col-12">
-                            	#academics
+                            	#academics pending populate
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="portfolio" role="tabpanel">
                         <div class="row">
                             <div class="col-12">
-                            	#portfolio
+                            	#portfolio pending populate
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="publications" role="tabpanel">
                         <div class="row">
                             <div class="col-12">
-                            	#publications
+                            	#publications pending populate
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="feeds" role="tabpanel">
                         <div class="row">
                             <div class="col-12">
-                            	#feeds
+                            	#feeds pending populate
                             </div>
                         </div>
                     </div>
@@ -185,15 +189,10 @@
         <div class="container">
             <div class="row">
                 <nav class="footer-nav">
-                    <ul class="d-none">
-                        <li><a href="https://www.creative-tim.com">Creative Tim</a></li>
-                        <li><a href="http://blog.creative-tim.com">Blog</a></li>
-                        <li><a href="https://www.creative-tim.com/license">Licenses</a></li>
-                    </ul>
                 </nav>
                 <div class="credits ml-auto">
                     <span class="copyright">
-                        © <script>document.write(new Date().getFullYear())</script>, customize with <i class="fa fa-heart heart"></i> from Creative Tim
+                        &copy; <script>document.write(new Date().getFullYear())</script>, customize with <i class="fa fa-heart heart"></i> from Creative Tim
                     </span>
                 </div>
             </div>
